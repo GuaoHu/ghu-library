@@ -61,6 +61,7 @@
         Total Stores:
         <!-- Activity 9b: Get the total number of stores from the bookstores object. -->
         <!-- TODO: CODE TO GET TOTAL STORES HERE -->
+        {{ storeCount }}
       </p>
 
       <h3>Iterating Object Properties</h3>
@@ -131,8 +132,14 @@ const austen = computed(() => {
   return authors.find((author) => (author.id = '1'))
 })
 
+// Activity 9a: Get company name
 const CompanyName = computed(() => {
   return bookstores.name
+})
+
+// Activity 9b: Get total stores
+const storeCount = computed(() => {
+  return bookstores.totalStores
 })
 </script>
 
