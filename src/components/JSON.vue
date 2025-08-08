@@ -88,7 +88,15 @@
       <!-- Activity 12: Get the top sellers from the bookstores object. -->
       <!-- TODO: CODE TO GET TOP SELLERS HERE -->
       <p>We operate in:</p>
+      <ul>
+        <li v-for="country in bookstores.countries" :key="country">
+          {{ country }}
+        </li>
+      </ul>
       <p>Our #1 seller:</p>
+      <p v-if="bookstores.topSellers && bookstores.topSellers.length > 0">
+        {{ bookstores.topSellers[0] }}
+      </p>
     </section>
 
     <section class="lab-section">
